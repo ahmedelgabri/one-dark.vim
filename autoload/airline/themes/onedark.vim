@@ -52,3 +52,34 @@ let g:airline#themes#onedark#palette.tabline = {
     \ 'airline_tabmod'       : s:TE,
     \ 'airline_tabmod_unsel' : s:R1
     \ }
+
+" Errors
+let s:ER = airline#themes#get_highlight2(['StatusLine', 'bg'], ['Error', 'fg'])
+let g:airline#themes#onedark#palette.normal.airline_error = [
+      \ s:ER[0], s:ER[1], s:ER[2], s:ER[3]
+      \ ]
+
+let g:airline#themes#onedark#palette.insert.airline_error =
+    \ g:airline#themes#onedark#palette.normal.airline_error
+
+let g:airline#themes#onedark#palette.visual.airline_error =
+    \ g:airline#themes#onedark#palette.normal.airline_error
+
+let g:airline#themes#onedark#palette.replace.airline_error =
+    \ g:airline#themes#onedark#palette.normal.airline_error
+
+" Warnings
+let s:WI = airline#themes#get_highlight2(['StatusLine', 'bg'], ['IncSearch', 'bg'], 'bold')
+let g:airline#themes#onedark#palette.normal.airline_warning = [
+      \ s:WI[0], s:WI[1], s:WI[2], s:WI[3]
+      \ ]
+
+let g:airline#themes#onedark#palette.insert.airline_warning =
+    \ g:airline#themes#onedark#palette.normal.airline_warning
+
+let g:airline#themes#onedark#palette.visual.airline_warning =
+    \ g:airline#themes#onedark#palette.normal.airline_warning
+
+let g:airline#themes#onedark#palette.replace.airline_warning =
+    \ g:airline#themes#onedark#palette.normal.airline_warning
+
